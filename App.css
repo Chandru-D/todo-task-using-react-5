@@ -1,0 +1,249 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F2F2F2;
+}
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+form {
+  display: grid;
+  margin-bottom: 30px;
+  grid-template-columns: minmax(0, 1fr) 20px;
+  column-gap: 20px;
+  outline: none;
+  border-radius: 5px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+}
+
+input[type="checkbox"] {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+  align-self: center;
+  accent-color: #ffffff !important;
+}
+
+input[type="checkbox"]:checked {
+  /* background-color: #2ecc71 !important;
+  border-color: #2ecc71 !important; #8dd2aa*/
+  border-radius: 3px;
+}
+
+
+input[type="text"]:not(.edit-input) {
+  flex-grow: 0 0 auto;
+  padding: 10px;
+  padding-right: 0;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  background: none;
+ 
+}
+
+button {
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  border: none;
+  background-color: #4CAF50;
+  color: #FFF;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #FFF;
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+
+
+li button {
+  margin-left: 10px;
+  background-color: #FF0000;
+  display: flex;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+}
+
+li span{
+   flex: 1;
+   cursor:pointer;  
+}
+
+.edit-input {
+ 
+  padding: 0;
+  margin: 0;
+  width: auto;
+  flex-grow: 0 0 auto;
+  flex-grow: 1;
+  border-radius: 5px 0 0 5px;
+  border: none;
+  outline: none;
+  /* background: none; */
+  font-size: inherit;
+}
+
+@media screen and (max-width:600px){
+  /* .edit-input{
+    width: 30%;
+  }
+  #new-todo{
+    font-size: 5px;
+  } */
+}
+
+/* .edit-input:focus {
+  
+ 
+  
+} */
+
+.edit-input:focus + li.selected{
+  border-color: #2ecc71;
+  border-style: solid;
+}
+
+.todo-text {
+  flex: 1;
+  /* margin: 0 10px; */
+  text-decoration: none;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+
+.material-symbols-outlined {
+font-variation-settings:
+'FILL' 0,
+'wght' 400,
+'GRAD' -25,
+'opsz' 20;
+margin-left: 10px;
+display: flex;
+/* padding: 5px 8px; */
+border-radius: 0 5px 5px 0;
+justify-content: flex-end;
+flex: 0 0 auto;
+color:#AAAAAA;
+justify-self: end;
+}
+
+.material-symbols-outlined.save-button{
+color: #4CAF50;
+}
+
+.material-symbols-outlined.cancel-button{
+color: #FF0000;
+}
+
+.delete-button{
+color: #FF0000;
+}
+
+.add-button{
+cursor: pointer;
+
+/* position: relative; */
+color: #4CAF50;
+/* text-align: center; */
+justify-self:right;
+/*  align-self: center;
+right: 10px; */
+padding-right: 10px;
+text-align: right;
+align-self: center;
+background-color: transparent;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #FFF inset !important;
+}
+
+input::webkit-credentials-auto-fill-button {
+    background-color: #FFF !important;
+}
+
+
+/* Checkbox.css */
+
+.green-checkbox {
+  position: relative;
+  margin-right: 10px;
+}
+
+.green-checkbox input[type="checkbox"] {
+  display: none;
+  
+}
+
+.green-checkbox label {
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.green-checkbox input[type="checkbox"]:checked + label {
+  background-color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.green-checkbox label::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.green-checkbox input[type="checkbox"]:checked + label::after {
+  display: block;
+  color: white;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  top: 3px;
+  left: 8px;
+  transform: rotate(45deg);
+}
