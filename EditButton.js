@@ -7,7 +7,7 @@ function EditButton({ index, onEditClick }) {
       className="material-symbols-outlined edit-button"
       onClick={() => onEditClick(index)}
     >
-      edit
+      edit is changing from remote
     </span>
   );
 }
