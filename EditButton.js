@@ -8,6 +8,7 @@ function EditButton({ index, onEditClick }) {
       onClick={() => onEditClick(index)}
     >
       edit is changing from remote
+      fn for changing the bubble sort
     </span>
   );
 }
